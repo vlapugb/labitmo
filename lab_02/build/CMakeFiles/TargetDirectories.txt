@@ -1,0 +1,3 @@
+/usr/local/labitmo/lab_02/build/CMakeFiles/rebuild_cache.dir
+/usr/local/labitmo/lab_02/build/CMakeFiles/edit_cache.dir
+/usr/local/labitmo/lab_02/build/CMakeFiles/my_executable.dir
