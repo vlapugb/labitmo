@@ -14,4 +14,4 @@ git tag -a "v$version" -m "Release version $version"
 git push origin stg --tags
 
 # Возвращаемся на ветку dev
-git checkout de
+git checkout dev
