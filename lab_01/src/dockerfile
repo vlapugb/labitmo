@@ -1,0 +1,11 @@
+# Используем образ Ubuntu 20.04
+FROM ubuntu:20.04
+
+# Обновляем пакетный менеджер и устанавливаем nano
+RUN apt-get update && apt-get install -y nano
+
+# Копируем скрипт внутрь контейнера
+COPY script.sh /usr/local
+
+# Делаем скрипт исполняемым
+RUN chmod +x /usr/local/script.sh
