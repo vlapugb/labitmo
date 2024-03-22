@@ -15,7 +15,7 @@ int main ()
     cin>>n;
     auto start = chrono::high_resolution_clock::now();
     for(int i = 0; i < n; ++i)
-    calc(1.0, 100);
+    calc(x);
     auto end = chrono::high_resolution_clock::now();
     
     auto duration = chrono::duration_cast<chrono::nanoseconds>(end - start);
