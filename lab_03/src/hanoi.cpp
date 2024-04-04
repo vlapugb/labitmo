@@ -27,9 +27,12 @@ public:
 
     void push_back(int from, int to) {
         Node* newptr = new Node(from, to);
-        if (tail == nullptr) {
+        if (tail == nullptr) 
+        {
             head = tail = newptr;
-        } else {
+        } 
+        else 
+        {
             tail->next = newptr;
             newptr->prev = tail;
             tail = newptr;
@@ -54,20 +57,22 @@ public:
     }
 };
 
-void hanoi(int n, int from, int to, int aux, LinkedList& list) {
+void hanoi(int n, int from, int to, LinkedList& list) {
     if (n == 1) {
         list.push_back(from, to);
         return;
     }
-    hanoi(n - 1, from, aux, to, list);
+    int other;
+    other = 6 - from - to;
+    hanoi(n - 1, from, other, list);
     list.push_back(from, to);
-    hanoi(n - 1, aux, to, from, list);
+    hanoi(n - 1, other, to, list);
 }
 
 int main() {
     LinkedList list;
-    int n = 4; // Количество дисков
-    hanoi(n, 1, 3, 2, list);
+    int n = 3; // Количество дисков
+    hanoi(n, 1, 3, list);
     list.printList();
     return 0;
 }
