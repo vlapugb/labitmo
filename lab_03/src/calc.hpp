@@ -1,4 +1,3 @@
-
 #include <cstdlib>
 #include <stdexcept>
 namespace std {
@@ -15,7 +14,7 @@ double powf(double a, int b) {
 
 double convertToDouble(char* str) 
 {
-    char* endptr = 0;
+    char* endptr{};
     double value = strtod(str, &endptr);
     if (*endptr != '\0' || endptr == str) {
         throw invalid_argument("Славянский зажим яйцами");

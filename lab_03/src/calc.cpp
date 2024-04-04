@@ -20,11 +20,11 @@ vector <double> vecnew;
         for (int i = 1; i < argc-1; ++i)
      {
         if(static_cast<int>(vecnew[i]) != vecnew[i])
-        throw invalid_argument("Славянский зажим яйцами будет");
+        throw invalid_argument("Славянский зажим яйцами");
      }
         cout << powf(vecnew[0], static_cast<int>(vecnew[1])) << endl;
 
-
+return 0;
        }
        if(op == '+') cout << sum(vecnew[0], vecnew[1]) << endl;
        if(op == '*') cout << multiyply(vecnew[0], vecnew[1]) << endl;
